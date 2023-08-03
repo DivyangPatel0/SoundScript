@@ -1,0 +1,192 @@
+body {
+    /* Set initial background color to white */
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+header {
+    width: 97.2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    margin-top: 1px;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.container {
+    background-color: #fff; /* Set initial container background color to white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 400px;
+    max-width: 100%;
+    resize: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004185;
+}
+
+footer {
+    width: 98.2%;
+    padding: 10px;
+    text-align: right; /* Align the text to the right */
+    background-color: #007bff;
+    color: #fff;
+    position: fixed; /* Set the footer position to fixed */
+    bottom: 0;
+}
+.highlight {
+    background-color: yellow;
+  }
+
+/* ... (previous CSS rules) ... */
+
+/* Night mode styles for the container and text area */
+.night-mode {
+    background-color: #222; /* Darker gray background for night mode */
+    color: #eee; /* Light text color for night mode */
+}
+
+.night-mode textarea {
+    color: #eee; /* Light text color for night mode in textarea */
+}
+
+/* Night mode styles for the header */
+.night-mode header {
+    background-color: #333; /* Dark background for night mode */
+    color: #eee; /* Light text color for night mode in header */
+}
+
+/* Night mode styles for the footer */
+.night-mode footer {
+    background-color: #444; /* Dark background for night mode */
+    color: #eee; /* Light text color for night mode in footer */
+}
+
+/* ... (rest of the CSS rules) ... */
+
+/* ... (previous CSS rules) ... */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Change the opacity or color as needed */
+    z-index: -1;
+}
+
+/* ... (previous CSS rules) ... */
+
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Change the opacity or color as needed */
+    z-index: -1;
+    visibility: hidden; /* Hide the pseudo-element by default */
+}
+
+/* Night mode styles for the container and text area */
+.container.night-mode::before {
+    visibility: visible; /* Show the pseudo-element in night mode */
+}
+
+/* Night mode styles for the textarea */
+.container.night-mode textarea {
+    color: #eee; /* Light text color for night mode in textarea */
+}
+
+/* Night mode styles for the header */
+.container.night-mode header {
+    background-color: #333; /* Dark background for night mode */
+    color: #eee; /* Light text color for night mode in header */
+}
+
+/* Night mode styles for the footer */
+.container.night-mode footer {
+    background-color: #444; /* Dark background for night mode */
+    color: #eee; /* Light text color for night mode in footer */
+}
+
+/* ... (rest of the CSS rules) ... */
+.container.night-mode {
+    background-color: #444; /* Set container background color to gray in night mode */
+}
